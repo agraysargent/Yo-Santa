@@ -6,11 +6,14 @@ const eventSchema = ({
     name: {
         type: String
     },
+    description: {
+        type: String
+    },
     duration: {
-        type: Number
+        type: Number,
     },
     price: {
-        type: Number
+        type: Number,
     }
 });
 
