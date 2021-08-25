@@ -4,13 +4,15 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Packages from "./pages/Packages";
+import Nav from "./components/nav";
 
 function App() {
   return (
     <div className="App">
-      <Home/>
-      <SignUp/>
-      <Packages/>
+      <Nav />
+      <Home />
+      <SignUp />
+      <Packages />
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
