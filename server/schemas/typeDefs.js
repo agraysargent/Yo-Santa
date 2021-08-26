@@ -36,3 +36,5 @@ const typeDefs = gql `
         events()
     }
 `
+
+module.exports = typeDefs;
