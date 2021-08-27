@@ -14,6 +14,11 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import Fall from "../images/autumn.jpg";
+import Summer from "../images/summer.jpg";
+import Spring from "../images/spring.jpg";
+import Winter from "../images/winter.jpeg";
 
 function Copyright() {
   return (
@@ -60,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4];
 
 export default function Packages({ linkHander }) {
   const classes = useStyles();
@@ -70,9 +75,8 @@ export default function Packages({ linkHander }) {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Packages
           </Typography>
         </Toolbar>
       </AppBar>
@@ -87,7 +91,7 @@ export default function Packages({ linkHander }) {
               color="textPrimary"
               gutterBottom
             >
-              Album layout
+              Available Packages
             </Typography>
             <Typography
               variant="h5"
@@ -95,57 +99,142 @@ export default function Packages({ linkHander }) {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              Below are available options based on seasons. Click on them to see
+              what packages are available.
             </Typography>
             <div className={classes.heroButtons}>
-              <Grid container spacing={2} justifyContent="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
+              <Grid container spacing={2} justifyContent="center"></Grid>
             </div>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
+          <Grid container spacing={2}>
+            <Grid>
+              <Card className={classes.root}>
+                <CardActionArea>
                   <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
+                    className={classes.media}
+                    component="img"
+                    alt="Fall"
+                    height="140"
+                    image={Fall}
+                    title="Fall"
                   />
-                  <CardContent className={classes.cardContent}>
+
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Fall/Autumn
                     </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Packages are available for October and November
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    View Options
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    component="img"
+                    alt="Winter"
+                    height="140"
+                    image={Winter}
+                    title="Winter"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Winter
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Packages are available December, January, and February.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    View Options
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    component="img"
+                    alt="Spring"
+                    height="140"
+                    image={Spring}
+                    title="Spring"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Spring
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Packages are available March, April, and May
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    View Options
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    component="img"
+                    alt="Fall"
+                    height="140"
+                    image={Summer}
+                    title="Summer"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Summer
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Packages are available June, July, August, and September.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    View Options
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </main>
