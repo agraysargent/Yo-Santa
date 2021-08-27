@@ -33,8 +33,19 @@ const typeDefs = gql `
     }
 
     type Query {
-        events()
-    }
+        events(category: ID, type: String): [Event]
+        event(_id: ID!): Event
+        user: User
+        order(_id: ID!): Order
+        checkout(products: [ID]!): Checkout
+        }
+        
+        type Mutation {
+        addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+        addOrder(event: [ID]!): Order
+        updateOrder(event: [ID]!): Order
+        login(email: String!, password: String!): Auth
+        }
 `
 
 module.exports = typeDefs;
