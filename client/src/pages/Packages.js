@@ -20,12 +20,15 @@ import Summer from "../images/summer.jpg";
 import Spring from "../images/spring.jpg";
 import Winter from "../images/winter.jpeg";
 
+import { MemoryRouter as Router } from "react-router";
+import { Link as RouterLink } from "react-router-dom";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        If you steal from us, we will send Krampus.
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -109,8 +112,8 @@ export default function Packages({ linkHander }) {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
-          <Grid container spacing={2}>
-            <Grid>
+          <Grid container spacing={6}>
+            <Grid item xs={6}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
@@ -136,13 +139,18 @@ export default function Packages({ linkHander }) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    View Options
+                  <Button
+                    href="/base"
+                    variant="contained"
+                    size="small"
+                    color="primary"
+                  >
+                    Link
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
-            <Grid>
+            <Grid item xs={6}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
@@ -167,13 +175,19 @@ export default function Packages({ linkHander }) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    View Options
-                  </Button>
+                  <Link
+                    component="button"
+                    variant="body2"
+                    onClick={() => {
+                      console.info("I'm a button.");
+                    }}
+                  >
+                    Button Link
+                  </Link>
                 </CardActions>
               </Card>
             </Grid>
-            <Grid>
+            <Grid item xs={6}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
@@ -204,7 +218,7 @@ export default function Packages({ linkHander }) {
                 </CardActions>
               </Card>
             </Grid>
-            <Grid>
+            <Grid item xs={6}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
@@ -241,7 +255,7 @@ export default function Packages({ linkHander }) {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          Yo Santa
         </Typography>
         <Typography
           variant="subtitle1"
@@ -249,7 +263,7 @@ export default function Packages({ linkHander }) {
           color="textSecondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          To Entertain and Delight!
         </Typography>
         <Copyright />
       </footer>
