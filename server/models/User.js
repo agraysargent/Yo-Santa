@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = reqiore('bcrypt');
-const Event = require('./Event');
+const Order = require('./Order');
+// const Event = require('./Event');
 
 
 const userSchema = new Schema ({
@@ -26,8 +27,10 @@ const userSchema = new Schema ({
         required: true,
         minlength: 5
     },
+
+    orders: [Order.schema]
         //  Hashed
-    events:  [Event.schema]
+    // events:  [Event.schema]
     // {
         //  [
         // type: String,

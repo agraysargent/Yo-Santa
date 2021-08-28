@@ -20,7 +20,7 @@ const typeDefs = gql `
     type Order {
         _id: ID
         purchaseDate: String
-        event: [Event]
+        events: [Event]
     }
 
     type Checkout {
@@ -33,11 +33,11 @@ const typeDefs = gql `
     }
 
     type Query {
-        events(category: ID, type: String): [Event]
+        events(_id: ID, type: String): [Event]
         event(_id: ID!): Event
         user: User
         order(_id: ID!): Order
-        checkout(products: [ID]!): Checkout
+        checkout(events: [ID]!): Checkout
         }
         
         type Mutation {
