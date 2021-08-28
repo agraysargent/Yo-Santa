@@ -1,48 +1,45 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import "./css/nav.css";
+import { Link } from "react-router-dom";
+import {
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Typography,
+  makeStyles,
+} from "@material-ui/core";
 
-function Nav(props) {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > * + *": {
+      marginLeft: theme.spacing(2),
+    },
+  },
+}));
+
+export default function Navbar() {
+  const classes = useStyles();
+  const preventDefault = (event) => event.preventDefault();
+
   return (
-    <nav className="nav">
-      <ul>
-        <li>
-          <a href="#" onClick={() => props.setPage("Checkout")}>
-            Checkout
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => props.setPage("Packages")}>
-            Packages
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => props.setPage("Home")}>
+    <AppBar position="static">
+      <CssBaseline />
+      <Toolbar>
+        <Typography variant="h4" className={classes.logo}>
+          Yo Santa
+        </Typography>
+        <div className={classes.navlinks}>
+          <Link to="/" className={classes.link}>
             Home
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => props.setPage("Winter")}>
-            Winter
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => props.setPage("Summer")}>
-            Summer
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => props.setPage("Fall")}>
-            Fall
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => props.setPage("Spring")}>
-            Spring
-          </a>
-        </li>
-      </ul>
-    </nav>
+          </Link>
+          <Link to="/packages" className={classes.link}>
+            Packages
+          </Link>
+          <Link to="/checkout" className={classes.link}>
+            Checkout
+          </Link>
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 }
-
-export default Nav;

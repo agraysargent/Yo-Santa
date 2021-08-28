@@ -11,43 +11,44 @@ import Fall from "./pages/Fall";
 import Summer from "./pages/Summer";
 import Spring from "./pages/Spring";
 
+const client = new ApolloClient({
+  uri: "/graphql",
+  cache: new InMemoryCache(),
+});
+
 function App() {
-  const [page, setPage] = useState("Home");
-
-  const linkHandler = (link) => {
-    console.log(link);
-    window.open(link);
-  };
-
-  const renderPage = (currentPage) => {
-    if (currentPage === "Home") {
-      return <Home />;
-    } else if (currentPage === "SignUp") {
-      return <SignUp />;
-    } else if (currentPage === "Checkout") {
-      return <Checkout />;
-    } else if (currentPage === "Winter") {
-      return <Winter />;
-    } else if (currentPage === "Summer") {
-      return <Summer />;
-    } else if (currentPage === "Fall") {
-      return <Fall />;
-    } else if (currentPage === "Spring") {
-      return <Spring />;
-    } else if (currentPage === "Packages") {
-      return <Packages linkHandler={linkHandler} />;
-    }
-  };
-
-  const handlePageChange = (newPage) => setPage(newPage);
-
   return (
-    <div>
-      <div>
-        <Nav page={page} setPage={handlePageChange} linkHandler={linkHandler} />
-        {renderPage(page)}
-      </div>
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Nav />
+        </div>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/packages">
+          <Packages />
+        </Route>
+        <Route exact path="/checkout">
+          <Checkout />
+        </Route>
+        <Route exact path="/fall">
+          <Fall />
+        </Route>
+        <Route exact path="/spring">
+          <Spring />
+        </Route>
+        <Route exact path="/summer">
+          <Summer />
+        </Route>
+        <Route exact path="/winter">
+          <Winter />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
+        </Route>
+      </Router>
+    </ApolloProvider>
   );
 }
 
