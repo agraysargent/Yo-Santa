@@ -10,4 +10,4 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-const stripePromise = loadStripe('sk_test_51JSsNxDp2J6zQC5M9rqW6JsMGxAGPudAYSqtCA5OV3YuqNDl31lKbcj8JSM0qmjBTY6boYzShYDHzOxyAijnuRwo00x2zumwrP);
+const stripePromise = loadStripe('pk_test_51JSsNxDp2J6zQC5MG4R2c7R8aBrmzbhnWNVyXzoQdZWNNzGtRjHYXLy8LJD0OQHNblHr8niGm363ZPZn2kirO6MZ00CsXTfOmr');
