@@ -7,7 +7,7 @@ const orderSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  event: [
+  events: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Event'
