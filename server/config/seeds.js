@@ -60,7 +60,8 @@ db.once('open', async () => {
           "Let's face it, your kids suck! Specifically yours. Want to teach them a lesson, but worried about what others will think. Hire Krampus, results guaranteed!",
         duration: 1,
         price: 100
-      },
+    }
+  ]);
 
   console.log('events seeded');
 
