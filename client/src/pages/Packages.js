@@ -20,8 +20,7 @@ import Summer from "../images/summer.jpg";
 import Spring from "../images/spring.jpg";
 import Winter from "../images/winter.jpeg";
 
-import { MemoryRouter as Router } from "react-router";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, MemoryRouter as Router } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -76,13 +75,7 @@ export default function Packages({ linkHander }) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Packages
-          </Typography>
-        </Toolbar>
-      </AppBar>
+
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
@@ -140,12 +133,13 @@ export default function Packages({ linkHander }) {
                 </CardActionArea>
                 <CardActions>
                   <Button
-                    href="/base"
                     variant="contained"
                     size="small"
                     color="primary"
+                    component={RouterLink}
+                    to="/fall"
                   >
-                    Link
+                    View Option
                   </Button>
                 </CardActions>
               </Card>
@@ -175,15 +169,15 @@ export default function Packages({ linkHander }) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Link
-                    component="button"
-                    variant="body2"
-                    onClick={() => {
-                      console.info("I'm a button.");
-                    }}
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color="primary"
+                    component={RouterLink}
+                    to="/winter"
                   >
-                    Button Link
-                  </Link>
+                    View Option
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -212,8 +206,14 @@ export default function Packages({ linkHander }) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    View Options
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color="primary"
+                    component={RouterLink}
+                    to="/spring"
+                  >
+                    View Option
                   </Button>
                 </CardActions>
               </Card>
@@ -243,8 +243,14 @@ export default function Packages({ linkHander }) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    View Options
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color="primary"
+                    component={RouterLink}
+                    to="/summer"
+                  >
+                    View Option
                   </Button>
                 </CardActions>
               </Card>
