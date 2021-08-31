@@ -9,6 +9,8 @@ import {
   makeStyles,
   Button,
 } from "@material-ui/core";
+import Auth from "../utils/auth";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > * + *": {
@@ -20,9 +22,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export default function Navbar() {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
+  if (Auth.loggedIn()){
+    return (
+    <AppBar position="static" className={classes.palette}>
+    <CssBaseline />
+    <Toolbar>
+      <div className={classes.navlinks}>
+        <Button component={Link} to="/" onClick={() => Auth.logout()}>
+          <Typography variant="h6" className={classes.logo}>
+            Logout
+          </Typography>
+        </Button>
+
+        <Button component={Link} to="/packages">
+          <Typography variant="h6" className={classes.logo}>
+            Packages
+          </Typography>
+        </Button>
+
+        <Button component={Link} to="/checkout">
+          <Typography variant="h6" className={classes.logo}>
+            Checkout
+          </Typography>
+        </Button>
+      </div>
+    </Toolbar>
+  </AppBar>
+    )
+  } else
   return (
     <AppBar position="static" className={classes.palette}>
       <CssBaseline />
@@ -30,7 +61,7 @@ export default function Navbar() {
         <div className={classes.navlinks}>
           <Button component={Link} to="/">
             <Typography variant="h6" className={classes.logo}>
-              Sign-In
+              Login
             </Typography>
           </Button>
 
