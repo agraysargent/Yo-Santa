@@ -5,11 +5,11 @@ const typeDefs = gql `
         _id: ID
         name: String
         description: String
-        duration: Number
-        price: Number
+        duration: Int
+        price: Int
     }
 
-    type Users {
+    type User {
         _id: ID
         firstName: String
         lastName: String
