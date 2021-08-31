@@ -8,7 +8,6 @@ import {
   Typography,
   makeStyles,
 } from "@material-ui/core";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > * + *": {
@@ -20,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
-
   return (
     <AppBar position="static">
       <CssBaseline />
