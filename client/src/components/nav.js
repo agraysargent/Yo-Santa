@@ -7,6 +7,7 @@ import {
   CssBaseline,
   Typography,
   makeStyles,
+  Button,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(2),
     },
   },
+  palette: {
+    backgroundColor: "#607d8b",
+  },
 }));
 
 export default function Navbar() {
@@ -22,22 +26,27 @@ export default function Navbar() {
   const preventDefault = (event) => event.preventDefault();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.palette}>
       <CssBaseline />
       <Toolbar>
-        <Typography variant="h4" className={classes.logo}>
-          Yo Santa
-        </Typography>
         <div className={classes.navlinks}>
-          <Link to="/" className={classes.link}>
-            Home
-          </Link>
-          <Link to="/packages" className={classes.link}>
-            Packages
-          </Link>
-          <Link to="/checkout" className={classes.link}>
-            Checkout
-          </Link>
+          <Button component={Link} to="/">
+            <Typography variant="h6" className={classes.logo}>
+              Sign-In
+            </Typography>
+          </Button>
+
+          <Button component={Link} to="/packages">
+            <Typography variant="h6" className={classes.logo}>
+              Packages
+            </Typography>
+          </Button>
+
+          <Button component={Link} to="/checkout">
+            <Typography variant="h6" className={classes.logo}>
+              Checkout
+            </Typography>
+          </Button>
         </div>
       </Toolbar>
     </AppBar>
