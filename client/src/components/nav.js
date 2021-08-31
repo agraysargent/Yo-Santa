@@ -9,24 +9,33 @@ import {
   makeStyles,
   Button,
 } from "@material-ui/core";
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > * + *": {
-      marginLeft: theme.spacing(2),
+
+import { createTheme } from "@material-ui/core/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: "#757ce8",
+      main: "white",
+      dark: "#002884",
+      contrastText: "#000",
+    },
+    secondary: {
+      light: "#ff7961",
+      main: "#f44336",
+      dark: "#ba000d",
+      contrastText: "#000",
     },
   },
-  palette: {
-    backgroundColor: "#607d8b",
-  },
-}));
+});
 
 export default function Navbar() {
-  const classes = useStyles();
+  const classes = theme;
   const preventDefault = (event) => event.preventDefault();
   return (
     <AppBar position="static" className={classes.palette}>
       <CssBaseline />
-      <Toolbar>
+      <Toolbar className="tool">
         <div className={classes.navlinks}>
           <Button component={Link} to="/">
             <Typography variant="h6" className={classes.logo}>
