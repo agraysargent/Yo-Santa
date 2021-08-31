@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Packages from "./pages/Packages";
 import Checkout from "./pages/Checkout";
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
 import Winter from "./pages/Winter";
 import Fall from "./pages/Fall";
 import Summer from "./pages/Summer";
