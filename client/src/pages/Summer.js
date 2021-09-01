@@ -19,6 +19,7 @@ import Sam from "../images/unclesam.jpg";
 import Krampus from "../images/krampus.jpg";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
+import Dog from "../images/dogsam.jpg";
 
 function Copyright() {
   return (
@@ -179,13 +180,13 @@ export default function Pricing() {
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
         <Grid alignItems="center" container spacing={5}>
-          <Grid item xs={10}>
+          <Grid item xs={6}>
             <Card className={classes.root}>
               <CardMedia
                 className={classes.media}
                 component="img"
                 alt="Sam"
-                height="500"
+                height="300"
                 image={Sam}
                 title="Sam"
               />
@@ -199,6 +200,40 @@ export default function Pricing() {
                   our Sam. Wanna drink beer? Wanna set off fireworks without
                   taking any safety precautions? Our Sam fits all your needs and
                   more.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  href="/Checkout"
+                  variant="contained"
+                  size="small"
+                  color="primary"
+                >
+                  Purchase
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={6}>
+            <Card className={classes.root}>
+              <CardMedia
+                className={classes.media}
+                component="img"
+                alt="DogSam"
+                height="300"
+                image={Dog}
+                title="DogSam"
+              />
+
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Red, White, and Blue!!!
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  So you're a traditionalist! No problem we still have an option
+                  for you. Get Uncle Sam and all the patriotism you can handle.
+                  We're talking solo cups, National Anthems, and setting off
+                  fireworks with guns!
                 </Typography>
               </CardContent>
               <CardActions>
