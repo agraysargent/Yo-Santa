@@ -25,9 +25,12 @@ import { Link as RouterLink, MemoryRouter as Router } from "react-router-dom";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        If you steal from us, we will send Krampus.
+      {"Copyright © Yo Santa! "}
+      <Link color="inherit" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <br></br>
+        Were you thinking of stealing? We're not liable for a horned,
+        anthropomorphic figure visiting you.
+        <br></br>
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -95,8 +98,12 @@ export default function Packages({ linkHander }) {
               color="textSecondary"
               paragraph
             >
-              Below are available options based on seasons. Click on them to see
-              what packages are available.
+              Below are our holiday packages available for purchase and
+              organized by season. So pick a season and book your event today!
+              <br></br>
+              <br></br>
+              Each package starts at a price point of $100; if you're looking to
+              extend your time, please send us an email to discuss!
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center"></Grid>
@@ -127,7 +134,7 @@ export default function Packages({ linkHander }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Packages are available for October and November
+                      Book your Autumn event!
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -139,7 +146,7 @@ export default function Packages({ linkHander }) {
                     component={RouterLink}
                     to="/fall"
                   >
-                    View Option
+                    Choose Package
                   </Button>
                 </CardActions>
               </Card>
@@ -164,7 +171,7 @@ export default function Packages({ linkHander }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Packages are available December, January, and February.
+                      Book your Winter Solstice event!
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -176,7 +183,7 @@ export default function Packages({ linkHander }) {
                     component={RouterLink}
                     to="/winter"
                   >
-                    View Option
+                    Choose Package
                   </Button>
                 </CardActions>
               </Card>
@@ -201,7 +208,7 @@ export default function Packages({ linkHander }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Packages are available March, April, and May
+                      Book your Spring event!
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -213,7 +220,7 @@ export default function Packages({ linkHander }) {
                     component={RouterLink}
                     to="/spring"
                   >
-                    View Option
+                    Choose Package
                   </Button>
                 </CardActions>
               </Card>
@@ -238,7 +245,7 @@ export default function Packages({ linkHander }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Packages are available June, July, August, and September.
+                      Book your summer event!
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -250,7 +257,7 @@ export default function Packages({ linkHander }) {
                     component={RouterLink}
                     to="/summer"
                   >
-                    View Option
+                    Choose Package
                   </Button>
                 </CardActions>
               </Card>

@@ -15,9 +15,10 @@ Yo Santa is a holiday booking service that utilizes Apollo, React, Express, Grap
 
 [Mark Andersen](https://github.com/MarkAndersen), [James O'Keefe](https://github.com/j-okeefe), [Pratik Patel](https://github.com/PratikPatel-Code), & [Angelica Sargent](https://github.com/agraysargent)
 
-# Screenshot
+# Gif
+![Alt Text](images/../client/src/images/yo-santa-gif.gif)
 
 # Link
 
-Check out [link]() here!
+Check out [Yo-Santa]() today and book your next event!
 
