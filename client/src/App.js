@@ -11,6 +11,8 @@ import Fall from "./pages/Fall";
 import Summer from "./pages/Summer";
 import Spring from "./pages/Spring";
 
+import "./components/App.css";
+
 const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
