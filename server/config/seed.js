@@ -41,9 +41,9 @@ db.once('open', async () => {
       price: 100
     },
     {
-      name: 'Summer 2',
+      name: 'Red, White, and Blue!!!',
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        "So you're a traditionalist! No problem we still have an option for you. Get Uncle Sam and all the patriotism you can handle. We're talking solo cups, National Anthems, and setting off fireworks with guns!",
       duration: 1,
       price: 100
     },
